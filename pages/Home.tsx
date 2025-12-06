@@ -48,7 +48,7 @@ const Home: React.FC = () => {
           <div className="flex items-center justify-center gap-4 pt-4">
             <a
               href="#buttons"
-              className="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-medium shadow-lg hover:shadow-xl transition-all hover:scale-105"
+              className="px-6 py-3 rounded-full bg-white text-black hover:bg-zinc-200 font-medium transition-all"
             >
               Explore Buttons
             </a>
@@ -56,7 +56,7 @@ const Home: React.FC = () => {
               href="https://github.com/prateekraiger"
               target="_blank"
               rel="noreferrer"
-              className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-white font-medium transition-all hover:scale-105"
+              className="px-6 py-3 rounded-full bg-zinc-800 border border-zinc-700 hover:bg-zinc-700 text-white font-medium transition-all"
             >
               View on GitHub
             </a>
@@ -68,7 +68,7 @@ const Home: React.FC = () => {
           <CategorySection
             title="Fluid Interface"
             description="Organic animations that mimic liquid properties"
-            icon={<Sparkles className="w-5 h-5 text-cyan-400" />}
+            icon={<Sparkles className="w-5 h-5 text-zinc-400" />}
             buttons={buttonCollection.filter((b) => b.category === "fluid")}
             onSelect={setSelectedButton}
           />
@@ -76,7 +76,7 @@ const Home: React.FC = () => {
           <CategorySection
             title="Depth & Dimension"
             description="3D transforms that break the 2D plane"
-            icon={<Box className="w-5 h-5 text-purple-400" />}
+            icon={<Box className="w-5 h-5 text-zinc-400" />}
             buttons={buttonCollection.filter((b) => b.category === "3d")}
             onSelect={setSelectedButton}
           />
@@ -84,7 +84,7 @@ const Home: React.FC = () => {
           <CategorySection
             title="Interaction Lab"
             description="Micro-interactions that delight users"
-            icon={<Zap className="w-5 h-5 text-yellow-400" />}
+            icon={<Zap className="w-5 h-5 text-zinc-400" />}
             buttons={buttonCollection.filter(
               (b) => b.category === "interaction"
             )}
@@ -94,7 +94,7 @@ const Home: React.FC = () => {
           <CategorySection
             title="Typography"
             description="Text-based animations and reveals"
-            icon={<Type className="w-5 h-5 text-emerald-400" />}
+            icon={<Type className="w-5 h-5 text-zinc-400" />}
             buttons={buttonCollection.filter(
               (b) => b.category === "typography"
             )}
@@ -104,7 +104,7 @@ const Home: React.FC = () => {
           <CategorySection
             title="Design Aesthetics"
             description="Styles from Brutalism to Glassmorphism"
-            icon={<Layers className="w-5 h-5 text-rose-400" />}
+            icon={<Layers className="w-5 h-5 text-zinc-400" />}
             buttons={buttonCollection.filter((b) => b.category === "aesthetic")}
             onSelect={setSelectedButton}
           />

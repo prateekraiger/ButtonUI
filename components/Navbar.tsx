@@ -14,14 +14,9 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center gap-2 text-xl font-bold tracking-tight hover:opacity-80 transition-opacity"
+            className="text-xl font-bold tracking-tight text-white hover:text-zinc-300 transition-colors"
           >
-            <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500 to-cyan-500">
-              <Sparkles className="w-5 h-5 text-white" />
-            </div>
-            <span className="bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
-              ButtonUI
-            </span>
+            ButtonUI
           </Link>
 
           {/* Desktop Navigation */}

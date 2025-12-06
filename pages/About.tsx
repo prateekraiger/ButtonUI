@@ -23,8 +23,8 @@ const About: React.FC = () => {
         {/* Mission Section */}
         <div className="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12 mb-12">
           <div className="flex items-start gap-4 mb-6">
-            <div className="p-3 rounded-xl bg-gradient-to-br from-purple-500 to-cyan-500">
-              <Target className="w-6 h-6 text-white" />
+            <div className="p-3 rounded-xl bg-zinc-800 border border-zinc-700">
+              <Target className="w-6 h-6 text-zinc-300" />
             </div>
             <div>
               <h2 className="text-2xl font-bold text-white mb-3">Our Mission</h2>
@@ -41,8 +41,8 @@ const About: React.FC = () => {
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-            <div className="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/20 w-fit mb-4">
-              <Zap className="w-5 h-5 text-cyan-400" />
+            <div className="p-3 rounded-xl bg-zinc-800 border border-zinc-700 w-fit mb-4">
+              <Zap className="w-5 h-5 text-zinc-300" />
             </div>
             <h3 className="text-xl font-semibold text-white mb-2">
               High Performance
@@ -54,8 +54,8 @@ const About: React.FC = () => {
           </div>
 
           <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-            <div className="p-3 rounded-xl bg-purple-500/10 border border-purple-500/20 w-fit mb-4">
-              <Code2 className="w-5 h-5 text-purple-400" />
+            <div className="p-3 rounded-xl bg-zinc-800 border border-zinc-700 w-fit mb-4">
+              <Code2 className="w-5 h-5 text-zinc-300" />
             </div>
             <h3 className="text-xl font-semibold text-white mb-2">
               Developer Friendly
@@ -67,8 +67,8 @@ const About: React.FC = () => {
           </div>
 
           <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-            <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 w-fit mb-4">
-              <Heart className="w-5 h-5 text-emerald-400" />
+            <div className="p-3 rounded-xl bg-zinc-800 border border-zinc-700 w-fit mb-4">
+              <Heart className="w-5 h-5 text-zinc-300" />
             </div>
             <h3 className="text-xl font-semibold text-white mb-2">
               Open Source
@@ -80,8 +80,8 @@ const About: React.FC = () => {
           </div>
 
           <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-            <div className="p-3 rounded-xl bg-rose-500/10 border border-rose-500/20 w-fit mb-4">
-              <Users className="w-5 h-5 text-rose-400" />
+            <div className="p-3 rounded-xl bg-zinc-800 border border-zinc-700 w-fit mb-4">
+              <Users className="w-5 h-5 text-zinc-300" />
             </div>
             <h3 className="text-xl font-semibold text-white mb-2">
               Community Driven
@@ -139,9 +139,8 @@ const About: React.FC = () => {
             href="https://github.com/prateekraiger"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black hover:bg-zinc-200 transition-all font-medium hover:scale-105"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black hover:bg-zinc-200 transition-all font-medium"
           >
-            <Sparkles className="w-4 h-4" />
             View on GitHub
           </a>
         </div>
