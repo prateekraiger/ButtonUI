@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumina UI Kit</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            bgDark: '#050505',
+            cardBg: 'rgba(255, 255, 255, 0.03)',
+          },
+          animation: {
+            'spin-slow': 'spin 3s linear infinite',
+          }
+        },
+      },
+      plugins: [
+        function ({ addUtilities }) {
+          const newUtilities = {
+            '.preserve-3d': { 'transform-style': 'preserve-3d' },
+            '.backface-hidden': { 'backface-visibility': 'hidden' },
+            '.perspective-1000': { 'perspective': '1000px' },
+            '.perspective-2000': { 'perspective': '2000px' },
+            '.rotate-x-90': { 'transform': 'rotateX(90deg)' },
+            '.rotate-x-110': { 'transform': 'rotateX(110deg)' },
+            '.-rotate-x-90': { 'transform': 'rotateX(-90deg)' },
+            '.rotate-y-180': { 'transform': 'rotateY(180deg)' },
+            '.-rotate-y-140': { 'transform': 'rotateY(-140deg)' },
+          };
+          addUtilities(newUtilities);
+        }
+      ]
+    }
+  </script>
+  <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://aistudiocdn.com/react@^19.2.1/",
+        "react": "https://aistudiocdn.com/react@^19.2.1",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0"
+      }
+    }
+    </script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body class="bg-[#050505] text-white">
+  <div id="root"></div>
+
+  <!-- Global SVG Filters for Liquid/Gooey Effects -->
+  <svg style="position: absolute; width: 0; height: 0;" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo">
+        </feColorMatrix>
+        <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+      </filter>
+    </defs>
+  </svg>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
