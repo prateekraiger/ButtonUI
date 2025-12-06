@@ -186,10 +186,10 @@ export const typographyButtons: ButtonItem[] = [
     category: "typography",
     component: RolodexButton,
     code: `const RolodexButton = () => (
-  <div className="h-10 w-28 [perspective:1000px] group">
-    <div className="relative w-full h-full text-xs font-medium text-zinc-300 transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateX(-90deg)]">
+  <div className="h-10 w-28 perspective-[1000px] group">
+    <div className="relative w-full h-full text-xs font-medium text-zinc-300 transition-transform duration-500 [transform-3d] ggroup-hover:transform-[rotateX(-90deg)]">
         <div className="absolute inset-0 flex items-center justify-center bg-zinc-900 border border-zinc-700 rounded backface-hidden">MENU</div>
-        <div className="absolute inset-0 flex items-center justify-center bg-zinc-100 text-black border border-white rounded [transform:rotateX(90deg)_translateZ(10px)]">CLOSE</div>
+        <div className="absolute inset-0 flex items-center justify-center bg-zinc-100 text-black border border-white rounded transform-[rotateX(90deg)_translateZ(10px)]">CLOSE</div>
     </div>
   </div>
 );`,
@@ -201,7 +201,7 @@ export const typographyButtons: ButtonItem[] = [
     component: GradientTextButton,
     code: `const GradientTextButton = () => (
   <button className="px-6 py-2 rounded-lg bg-black border border-zinc-800 group">
-    <span className="text-sm font-bold bg-[linear-gradient(to_right,#e4e4e7_0%,#6366f1_50%,#e4e4e7_100%)] bg-[length:200%_auto] bg-clip-text text-transparent transition-[background-position] duration-500 group-hover:[background-position:right_center]">Prismatic</span>
+    <span className="text-sm font-bold bg-[linear-gradient(to_right,#e4e4e7_0%,#6366f1_50%,#e4e4e7_100%)] bg-size-[200%_auto] bg-clip-text text-transparent transition-[background-position] duration-500 group-hover:bg-position-[right_center]">Prismatic</span>
   </button>
 );`,
   },

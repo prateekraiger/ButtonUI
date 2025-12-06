@@ -12,7 +12,8 @@ import {
   Zap,
   Type,
 } from "lucide-react";
-import { buttonCollection, ButtonItem } from "./data/buttons";
+import { buttonCollection } from "./data/buttons";
+import { ButtonItem } from "./data/buttons/types";
 
 const App: React.FC = () => {
   const [selectedButton, setSelectedButton] = useState<ButtonItem | null>(null);
@@ -35,7 +36,7 @@ const App: React.FC = () => {
             v2.0 Release
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tighter bg-gradient-to-b from-white via-white to-zinc-500 bg-clip-text text-transparent pb-4">
+          <h1 className="text-6xl md:text-8xl font-bold tracking-tighter bg-linear-to-b from-white via-white to-zinc-500 bg-clip-text text-transparent pb-4">
             Lumina UI
           </h1>
 
@@ -170,7 +171,7 @@ const CategorySection: React.FC<{
           className="group relative bg-[#0A0A0A] border border-white/5 rounded-3xl h-64 flex flex-col items-center justify-center gap-6 hover:border-white/20 transition-all duration-500 hover:shadow-2xl hover:shadow-black/50 overflow-hidden"
         >
           {/* Grid Background Pattern */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
           <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
             <button
@@ -186,7 +187,7 @@ const CategorySection: React.FC<{
             <btn.component />
           </div>
 
-          <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center">
+          <div className="absolute bottom-0 inset-x-0 p-4 bg-linear-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center">
             <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
               {btn.name}
             </span>
