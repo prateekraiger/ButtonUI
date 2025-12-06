@@ -9,51 +9,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Outfit', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-          colors: {
-            bgDark: '#050505',
-            cardBg: 'rgba(255, 255, 255, 0.03)',
-          },
-          animation: {
-            'spin-slow': 'spin 3s linear infinite',
-          }
-        },
-      },
-      plugins: [
-        function ({ addUtilities }) {
-          const newUtilities = {
-            '.preserve-3d': { 'transform-style': 'preserve-3d' },
-            '.backface-hidden': { 'backface-visibility': 'hidden' },
-            '.perspective-1000': { 'perspective': '1000px' },
-            '.perspective-2000': { 'perspective': '2000px' },
-            '.rotate-x-90': { 'transform': 'rotateX(90deg)' },
-            '.rotate-x-110': { 'transform': 'rotateX(110deg)' },
-            '.-rotate-x-90': { 'transform': 'rotateX(-90deg)' },
-            '.rotate-y-180': { 'transform': 'rotateY(180deg)' },
-            '.-rotate-y-140': { 'transform': 'rotateY(-140deg)' },
-          };
-          addUtilities(newUtilities);
-        }
-      ]
-    }
-  </script>
-  <script type="importmap">
-    {
-      "imports": {
-        "react/": "https://aistudiocdn.com/react@^19.2.1/",
-        "react": "https://aistudiocdn.com/react@^19.2.1",
-        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
-        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0"
-      }
-    }
-    </script>
   <link rel="stylesheet" href="/index.css">
 </head>
 
