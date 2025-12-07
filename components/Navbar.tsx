@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Github, Sparkles } from "lucide-react";
+import { Menu, X, Github } from "lucide-react";
 import { Logo } from "./Logo";
 
 const Navbar: React.FC = () => {
@@ -9,89 +9,47 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#050505]/80 backdrop-blur-xl border-b border-white/5">
-      <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link
-            to="/"
-            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
-          >
+    <nav className="bg-[#050505] fixed w-full z-20 top-0 start-0 border-b border-white/5">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <Logo size={32} />
-            <span className="text-xl font-bold tracking-tight text-white">
-              ButtonUI
-            </span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link
-              to="/"
-              className="text-sm font-medium text-zinc-400 hover:text-white transition-colors"
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="text-sm font-medium text-zinc-400 hover:text-white transition-colors"
-            >
-              About
-            </Link>
+            <span className="self-center text-xl text-white font-semibold whitespace-nowrap">ButtonUI</span>
+        </Link>
+        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <a
               href="https://github.com/prateekraiger"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white text-black hover:bg-zinc-200 transition-all font-medium text-sm"
+              className="text-black bg-white hover:bg-zinc-200 box-border border border-transparent focus:ring-4 focus:ring-white/20 shadow-xs font-medium leading-5 rounded-lg text-sm px-3 py-2 focus:outline-none"
             >
-              <Github className="w-4 h-4" />
-              <span>GitHub</span>
+              <Github className="w-4 h-4 inline-block mr-2" />
+              GitHub
             </a>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="md:hidden p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? (
-              <X className="w-5 h-5" />
-            ) : (
-              <Menu className="w-5 h-5" />
-            )}
-          </button>
+            <button
+              onClick={toggleMenu}
+              type="button"
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-zinc-400 rounded-lg md:hidden hover:bg-white/5 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/10"
+              aria-controls="navbar-sticky"
+              aria-expanded={isMenuOpen ? "true" : "false"}
+            >
+                <span className="sr-only">Open main menu</span>
+                {isMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
+            </button>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-white/5 pt-4 animate-in fade-in slide-in-from-top-5 duration-300">
-            <div className="flex flex-col gap-4">
-              <Link
-                to="/"
-                onClick={toggleMenu}
-                className="text-sm font-medium text-zinc-400 hover:text-white transition-colors py-2"
-              >
-                Home
-              </Link>
-              <Link
-                to="/about"
-                onClick={toggleMenu}
-                className="text-sm font-medium text-zinc-400 hover:text-white transition-colors py-2"
-              >
-                About
-              </Link>
-              <a
-                href="https://github.com/prateekraiger"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white text-black hover:bg-zinc-200 transition-all font-medium text-sm w-full justify-center"
-              >
-                <Github className="w-4 h-4" />
-                <span>GitHub</span>
-              </a>
-            </div>
-          </div>
-        )}
+        <div className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${isMenuOpen ? '' : 'hidden'}`} id="navbar-sticky">
+          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-white/5 rounded-lg bg-white/5 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-[#050505]">
+            <li>
+              <Link to="/" className="block py-2 px-3 text-white bg-white/5 rounded-sm md:bg-transparent md:text-white md:p-0" aria-current="page">Home</Link>
+            </li>
+            <li>
+              <Link to="/about" className="block py-2 px-3 text-white rounded hover:bg-white/10 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0">About</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   );

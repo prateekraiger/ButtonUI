@@ -8,7 +8,7 @@ import About from "./pages/About";
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="min-h-screen bg-[#050505] text-white overflow-x-hidden selection:bg-purple-500/30 font-sans">
+      <div className="min-h-screen bg-[#050505] text-white overflow-x-hidden selection:bg-white/20 font-sans">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
