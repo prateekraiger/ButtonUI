@@ -6,13 +6,17 @@ interface OutlineTextProps extends HTMLAttributes<HTMLSpanElement> {
   className?: string;
 }
 
-export function OutlineText({ children, className = "", ...props }: OutlineTextProps) {
+export function OutlineText({
+  children,
+  className = "",
+  ...props
+}: OutlineTextProps) {
   return (
     <span
       className={cn(
         "inline-block font-extrabold",
-        "text-[4rem] md:text-[6rem] leading-none",
-        "text-transparent bg-clip-text select-none",
+        "text-[4rem] leading-none md:text-[6rem]",
+        "bg-clip-text text-transparent select-none",
         className
       )}
       style={{

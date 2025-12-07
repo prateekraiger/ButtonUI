@@ -4,99 +4,99 @@ import { Sparkles, Target, Zap, Heart, Code2, Users } from "lucide-react";
 const About: React.FC = () => {
   return (
     <div className="min-h-screen pt-32 pb-20">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="mx-auto max-w-4xl px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-zinc-400 mb-6">
-            <Sparkles className="w-3 h-3" />
+        <div className="mb-16 text-center">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-zinc-400">
+            <Sparkles className="h-3 w-3" />
             About ButtonUI
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight bg-linear-to-b from-white to-zinc-500 bg-clip-text text-transparent mb-6">
+          <h1 className="mb-6 bg-linear-to-b from-white to-zinc-500 bg-clip-text text-5xl font-bold tracking-tight text-transparent md:text-6xl">
             Crafting Delightful Interactions
           </h1>
-          <p className="text-zinc-400 text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-zinc-400">
             ButtonUI is a comprehensive collection of modern, interactive button
             components designed for the next generation of web applications.
           </p>
         </div>
 
         {/* Mission Section */}
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12 mb-12">
-          <div className="flex flex-col items-start gap-3 mb-6">
-            <div className="inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full bg-zinc-900/50 border border-white/10 backdrop-blur-md hover:border-white/20 transition-colors">
-              <div className="p-2 rounded-full bg-white/5 border border-white/5 text-zinc-400">
-                <Target className="w-5 h-5" />
+        <div className="mb-12 rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12">
+          <div className="mb-6 flex flex-col items-start gap-3">
+            <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-zinc-900/50 py-2 pr-6 pl-2 backdrop-blur-md transition-colors hover:border-white/20">
+              <div className="rounded-full border border-white/5 bg-white/5 p-2 text-zinc-400">
+                <Target className="h-5 w-5" />
               </div>
-              <h2 className="text-lg font-semibold text-zinc-100 tracking-tight">
+              <h2 className="text-lg font-semibold tracking-tight text-zinc-100">
                 Our Mission
               </h2>
             </div>
-            <p className="text-zinc-400 leading-relaxed">
+            <p className="leading-relaxed text-zinc-400">
               We believe that great user interfaces are built on great
-              interactions. ButtonUI exists to provide developers and
-              designers with production-ready, beautiful button components
-              that enhance user experience without sacrificing performance.
+              interactions. ButtonUI exists to provide developers and designers
+              with production-ready, beautiful button components that enhance
+              user experience without sacrificing performance.
             </p>
           </div>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-            <div className="inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full bg-zinc-900/50 border border-white/10 backdrop-blur-md mb-4 hover:border-white/20 transition-colors">
-              <div className="p-2 rounded-full bg-white/5 border border-white/5 text-zinc-400">
-                <Zap className="w-4 h-4" />
+        <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors hover:bg-white/10">
+            <div className="mb-4 inline-flex items-center gap-3 rounded-full border border-white/10 bg-zinc-900/50 py-2 pr-6 pl-2 backdrop-blur-md transition-colors hover:border-white/20">
+              <div className="rounded-full border border-white/5 bg-white/5 p-2 text-zinc-400">
+                <Zap className="h-4 w-4" />
               </div>
               <h3 className="text-base font-semibold text-zinc-100">
                 High Performance
               </h3>
             </div>
-            <p className="text-zinc-400 text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed text-zinc-400">
               Built with performance in mind. All components are optimized for
               60fps animations and minimal bundle size.
             </p>
           </div>
 
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-            <div className="inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full bg-zinc-900/50 border border-white/10 backdrop-blur-md mb-4 hover:border-white/20 transition-colors">
-              <div className="p-2 rounded-full bg-white/5 border border-white/5 text-zinc-400">
-                <Code2 className="w-4 h-4" />
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors hover:bg-white/10">
+            <div className="mb-4 inline-flex items-center gap-3 rounded-full border border-white/10 bg-zinc-900/50 py-2 pr-6 pl-2 backdrop-blur-md transition-colors hover:border-white/20">
+              <div className="rounded-full border border-white/5 bg-white/5 p-2 text-zinc-400">
+                <Code2 className="h-4 w-4" />
               </div>
               <h3 className="text-base font-semibold text-zinc-100">
                 Developer Friendly
               </h3>
             </div>
-            <p className="text-zinc-400 text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed text-zinc-400">
               Simple, clean code using React and Tailwind CSS. Copy-paste ready
               with full TypeScript support.
             </p>
           </div>
 
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-            <div className="inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full bg-zinc-900/50 border border-white/10 backdrop-blur-md mb-4 hover:border-white/20 transition-colors">
-              <div className="p-2 rounded-full bg-white/5 border border-white/5 text-zinc-400">
-                <Heart className="w-4 h-4" />
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors hover:bg-white/10">
+            <div className="mb-4 inline-flex items-center gap-3 rounded-full border border-white/10 bg-zinc-900/50 py-2 pr-6 pl-2 backdrop-blur-md transition-colors hover:border-white/20">
+              <div className="rounded-full border border-white/5 bg-white/5 p-2 text-zinc-400">
+                <Heart className="h-4 w-4" />
               </div>
               <h3 className="text-base font-semibold text-zinc-100">
                 Open Source
               </h3>
             </div>
-            <p className="text-zinc-400 text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed text-zinc-400">
               Free and open source under MIT license. Use in personal and
               commercial projects without restrictions.
             </p>
           </div>
 
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-            <div className="inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full bg-zinc-900/50 border border-white/10 backdrop-blur-md mb-4 hover:border-white/20 transition-colors">
-              <div className="p-2 rounded-full bg-white/5 border border-white/5 text-zinc-400">
-                <Users className="w-4 h-4" />
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors hover:bg-white/10">
+            <div className="mb-4 inline-flex items-center gap-3 rounded-full border border-white/10 bg-zinc-900/50 py-2 pr-6 pl-2 backdrop-blur-md transition-colors hover:border-white/20">
+              <div className="rounded-full border border-white/5 bg-white/5 p-2 text-zinc-400">
+                <Users className="h-4 w-4" />
               </div>
               <h3 className="text-base font-semibold text-zinc-100">
                 Community Driven
               </h3>
             </div>
-            <p className="text-zinc-400 text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed text-zinc-400">
               Built by developers, for developers. Contributions and feedback
               are always welcome.
             </p>
@@ -105,13 +105,13 @@ const About: React.FC = () => {
 
         {/* Creator Section */}
         <div className="text-center">
-          <p className="text-zinc-400 mb-4">
+          <p className="mb-4 text-zinc-400">
             Created and maintained by{" "}
             <a
               href="https://github.com/prateekraiger"
               target="_blank"
               rel="noreferrer"
-              className="text-white hover:text-purple-400 transition-colors font-medium"
+              className="font-medium text-white transition-colors hover:text-purple-400"
             >
               @prateekraiger
             </a>
@@ -120,7 +120,7 @@ const About: React.FC = () => {
             href="https://github.com/prateekraiger"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black hover:bg-zinc-200 transition-all font-medium"
+            className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-medium text-black transition-all hover:bg-zinc-200"
           >
             View on GitHub
           </a>

@@ -86,7 +86,7 @@ export const aestheticButtons: ButtonItem[] = [
     name: "Outline Draw",
     category: "aesthetic",
     component: () => (
-      <button className="relative px-8 py-3 font-bold text-white group">
+      <button className="group relative px-8 py-3 font-bold text-white">
         <span className="absolute inset-0 border-2 border-white transition-all duration-500 [clip-path:polygon(0_0,0_0,0_100%,0_100%)] group-hover:[clip-path:polygon(0_0,100%_0,100%_100%,0_100%)]"></span>
         <span className="absolute inset-0 border-2 border-white opacity-20"></span>
         DRAW
@@ -105,7 +105,7 @@ export const aestheticButtons: ButtonItem[] = [
     name: "Minimal Elegant",
     category: "aesthetic",
     component: () => (
-      <button className="rounded-full border border-zinc-700 bg-zinc-900 px-8 py-3 font-light tracking-[4px] text-zinc-400 transition-all duration-300 hover:border-zinc-500 hover:text-white hover:tracking-[6px]">
+      <button className="rounded-full border border-zinc-700 bg-zinc-900 px-8 py-3 font-light tracking-[4px] text-zinc-400 transition-all duration-300 hover:border-zinc-500 hover:tracking-[6px] hover:text-white">
         MINIMAL
       </button>
     ),
@@ -135,7 +135,7 @@ export const aestheticButtons: ButtonItem[] = [
     name: "Glitch Cyberpunk",
     category: "aesthetic",
     component: () => (
-      <button className="relative border border-yellow-400 bg-zinc-900 px-8 py-3 font-bold text-yellow-400 shadow-[4px_4px_0_rgba(250,204,21,0.5)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none hover:bg-yellow-400 hover:text-black">
+      <button className="relative border border-yellow-400 bg-zinc-900 px-8 py-3 font-bold text-yellow-400 shadow-[4px_4px_0_rgba(250,204,21,0.5)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:bg-yellow-400 hover:text-black hover:shadow-none">
         CYBERPUNK
       </button>
     ),
@@ -144,5 +144,5 @@ export const aestheticButtons: ButtonItem[] = [
   CYBERPUNK
 </button>
     `,
-  }
+  },
 ];

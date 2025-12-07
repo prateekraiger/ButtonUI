@@ -26,17 +26,20 @@
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/prateekraiger/buttonui.git
 cd buttonui
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
 ```
@@ -48,7 +51,7 @@ npm run dev
 Each button component is self-contained and easy to use. Simply copy the code from the website and paste it into your project.
 
 ```tsx
-import { ButtonComponent } from './components/YourButton';
+import { ButtonComponent } from "./components/YourButton";
 
 function App() {
   return (
