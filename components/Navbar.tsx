@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Github, Sparkles } from "lucide-react";
+import { Logo } from "./Logo";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,9 +15,12 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="text-xl font-bold tracking-tight text-white hover:text-zinc-300 transition-colors"
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
-            ButtonUI
+            <Logo size={32} />
+            <span className="text-xl font-bold tracking-tight text-white">
+              ButtonUI
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -32,12 +36,6 @@ const Navbar: React.FC = () => {
               className="text-sm font-medium text-zinc-400 hover:text-white transition-colors"
             >
               About
-            </Link>
-            <Link
-              to="/contact"
-              className="text-sm font-medium text-zinc-400 hover:text-white transition-colors"
-            >
-              Contact
             </Link>
             <a
               href="https://github.com/prateekraiger"
@@ -81,13 +79,6 @@ const Navbar: React.FC = () => {
                 className="text-sm font-medium text-zinc-400 hover:text-white transition-colors py-2"
               >
                 About
-              </Link>
-              <Link
-                to="/contact"
-                onClick={toggleMenu}
-                className="text-sm font-medium text-zinc-400 hover:text-white transition-colors py-2"
-              >
-                Contact
               </Link>
               <a
                 href="https://github.com/prateekraiger"

@@ -27,12 +27,14 @@ const About: React.FC = () => {
               <Target className="w-6 h-6 text-zinc-300" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-white mb-3">Our Mission</h2>
+              <h2 className="text-2xl font-bold text-white mb-3">
+                Our Mission
+              </h2>
               <p className="text-zinc-400 leading-relaxed">
                 We believe that great user interfaces are built on great
-                interactions. ButtonUI exists to provide developers and designers
-                with production-ready, beautiful button components that enhance
-                user experience without sacrificing performance.
+                interactions. ButtonUI exists to provide developers and
+                designers with production-ready, beautiful button components
+                that enhance user experience without sacrificing performance.
               </p>
             </div>
           </div>
@@ -87,38 +89,9 @@ const About: React.FC = () => {
               Community Driven
             </h3>
             <p className="text-zinc-400 text-sm leading-relaxed">
-              Built by developers, for developers. Contributions and feedback are
-              always welcome.
+              Built by developers, for developers. Contributions and feedback
+              are always welcome.
             </p>
-          </div>
-        </div>
-
-        {/* Technology Stack */}
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12 mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            Technology Stack
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-4xl mb-2">⚛️</div>
-              <div className="text-sm font-medium text-white">React 19</div>
-              <div className="text-xs text-zinc-500 mt-1">Framework</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-2">🎨</div>
-              <div className="text-sm font-medium text-white">Tailwind CSS</div>
-              <div className="text-xs text-zinc-500 mt-1">Styling</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-2">📘</div>
-              <div className="text-sm font-medium text-white">TypeScript</div>
-              <div className="text-xs text-zinc-500 mt-1">Type Safety</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-2">⚡</div>
-              <div className="text-sm font-medium text-white">Vite</div>
-              <div className="text-xs text-zinc-500 mt-1">Build Tool</div>
-            </div>
           </div>
         </div>
 

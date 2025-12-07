@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Github, Twitter, Linkedin, Mail, Heart, Sparkles } from "lucide-react";
+import { Logo } from "./Logo";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -9,21 +10,19 @@ const Footer: React.FC = () => {
     <footer className="mt-32 border-t border-white/5 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6 py-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500 to-cyan-500">
-                <Sparkles className="w-5 h-5 text-white" />
-              </div>
+            <Link to="/" className="flex items-center gap-3 mb-4">
+              <Logo size={32} />
               <span className="text-xl font-bold bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
                 ButtonUI
               </span>
             </Link>
             <p className="text-zinc-400 text-sm leading-relaxed max-w-md">
               A curated museum of high-performance, interaction-heavy buttons.
-              Crafted for the modern web with Tailwind CSS. Open source and
-              free to use.
+              Crafted for the modern web with Tailwind CSS. Open source and free
+              to use.
             </p>
             <div className="flex items-center gap-4 mt-6">
               <a
@@ -79,14 +78,6 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/contact"
-                  className="text-zinc-400 text-sm hover:text-white transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
                 <a
                   href="https://github.com/prateekraiger"
                   target="_blank"
@@ -94,41 +85,6 @@ const Footer: React.FC = () => {
                   className="text-zinc-400 text-sm hover:text-white transition-colors"
                 >
                   GitHub
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
-              Legal
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/privacy"
-                  className="text-zinc-400 text-sm hover:text-white transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/terms"
-                  className="text-zinc-400 text-sm hover:text-white transition-colors"
-                >
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/prateekraiger"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-zinc-400 text-sm hover:text-white transition-colors"
-                >
-                  License
                 </a>
               </li>
             </ul>

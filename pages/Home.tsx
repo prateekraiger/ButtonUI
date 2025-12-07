@@ -32,7 +32,7 @@ const Home: React.FC = () => {
         <header className="text-center mb-32 space-y-8 animate-fade-in-up pt-20">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-zinc-400 mb-6 hover:bg-white/10 transition-colors cursor-default">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            v2.0 Release
+            v1.0 Release
           </div>
 
           <h1 className="text-6xl md:text-8xl font-bold tracking-tighter bg-linear-to-b from-white via-white to-zinc-500 bg-clip-text text-transparent pb-4">
