@@ -118,4 +118,56 @@ export const dButtons: ButtonItem[] = [
     </div>
   </div>
 );` },
+  {
+    id: "3d-scan",
+    name: "3D Scan",
+    category: "3d",
+    component: () => (
+      <button className="relative w-full overflow-hidden rounded-lg border border-emerald-500/30 bg-transparent px-8 py-3 font-bold text-emerald-500 transition-colors hover:bg-emerald-500/10 group">
+        <span className="relative z-10">SYSTEM SCAN</span>
+        <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent group-hover:animate-[scan-line-3d_2.5s_cubic-bezier(0.4,0,0.2,1)_infinite]"></div>
+      </button>
+    ),
+    code: `
+<button className="relative w-full overflow-hidden rounded-lg border border-emerald-500/30 bg-transparent px-8 py-3 font-bold text-emerald-500 transition-colors hover:bg-emerald-500/10 group">
+  <span className="relative z-10">SYSTEM SCAN</span>
+  <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent group-hover:animate-[scan-line-3d_2.5s_cubic-bezier(0.4,0,0.2,1)_infinite]"></div>
+</button>
+
+/* Add to global CSS */
+@keyframes scan-line-3d {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(500%); }
+}
+    `,
+  },
+  {
+    id: "rolodex-flip",
+    name: "Rolodex Flip",
+    category: "3d",
+    component: () => (
+      <button className="group perspective-1000 relative h-12 w-40 overflow-hidden rounded-lg bg-zinc-800 font-bold text-white">
+        <div className="absolute inset-0 flex items-center justify-center transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateX(-90deg)]">
+          <span className="flex h-full w-full items-center justify-center bg-zinc-800 [backface-visibility:hidden]">
+            HOVER ME
+          </span>
+          <span className="absolute flex h-full w-full items-center justify-center bg-indigo-600 [backface-visibility:hidden] [transform:rotateX(90deg)_translateZ(24px)]">
+            FLIPPED!
+          </span>
+        </div>
+      </button>
+    ),
+    code: `
+<button className="group perspective-1000 relative h-12 w-40 overflow-hidden rounded-lg bg-zinc-800 font-bold text-white">
+  <div className="absolute inset-0 flex items-center justify-center transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateX(-90deg)]">
+    <span className="flex h-full w-full items-center justify-center bg-zinc-800 [backface-visibility:hidden]">
+      HOVER ME
+    </span>
+    <span className="absolute flex h-full w-full items-center justify-center bg-indigo-600 [backface-visibility:hidden] [transform:rotateX(90deg)_translateZ(24px)]">
+      FLIPPED!
+    </span>
+  </div>
+</button>
+    `,
+  }
 ];

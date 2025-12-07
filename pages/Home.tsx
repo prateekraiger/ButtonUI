@@ -14,6 +14,8 @@ import {
 import { buttonCollection } from "../data/buttons";
 import { ButtonItem } from "../data/buttons/types";
 import { FlickeringGrid } from "../components/ui/flickering-grid";
+import { OutlineText } from "../components/outline-text";
+
 
 const Home: React.FC = () => {
   const [selectedButton, setSelectedButton] = useState<ButtonItem | null>(null);
@@ -41,7 +43,8 @@ const Home: React.FC = () => {
           </div>
 
           <h1 className="text-6xl md:text-8xl font-bold tracking-tighter bg-linear-to-b from-white via-white to-zinc-500 bg-clip-text text-transparent pb-4 drop-shadow-2xl">
-            ButtonUI
+                  <OutlineText>ButtonUI</OutlineText>
+
           </h1>
 
           <p className="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
