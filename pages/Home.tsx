@@ -1,3 +1,4 @@
+import { Highlight, themes } from "prism-react-renderer";
 import React, { useState } from "react";
 import {
   Code2,
@@ -302,9 +303,26 @@ const CodeModal: React.FC<{ button: ButtonItem; onClose: () => void }> = ({
             </div>
 
             <div className="scrollbar-hide flex-1 overflow-auto p-6">
-              <pre className="font-mono text-[13px] leading-relaxed text-zinc-300">
-                <code className="language-tsx">{button.code}</code>
-              </pre>
+              <Highlight
+                theme={themes.nightOwl}
+                code={button.code}
+                language="tsx"
+              >
+                {({ className, style, tokens, getLineProps, getTokenProps }) => (
+                  <pre
+                    className={`font-mono text-[13px] leading-relaxed ${className}`}
+                    style={{ ...style, backgroundColor: "transparent" }}
+                  >
+                    {tokens.map((line, i) => (
+                      <div key={i} {...getLineProps({ line })}>
+                        {line.map((token, key) => (
+                          <span key={key} {...getTokenProps({ token })} />
+                        ))}
+                      </div>
+                    ))}
+                  </pre>
+                )}
+              </Highlight>
             </div>
           </div>
         </div>
