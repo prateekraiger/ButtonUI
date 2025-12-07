@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
       ]}
       legalLinks={[
         { href: "#", label: "Open Source" },
-        { href: "#", label: "MIT License" },
+        { href: "#", label: "Apache-2.0 license" },
       ]}
       copyright={{
         text: `© ${currentYear} ButtonUI`,

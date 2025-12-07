@@ -1,77 +1,49 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ButtonUI - Modern Interactive Button Components</title>
-    <meta
-      name="description"
-      content="A curated collection of high-performance, interaction-heavy button components crafted for the modern web with React and Tailwind CSS."
-    />
-    <meta
-      name="keywords"
-      content="buttons, ui components, react, tailwind css, web design, interactive buttons"
-    />
-    <meta name="author" content="ButtonUI" />
 
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="ButtonUI - Modern Interactive Button Components"
-    />
-    <meta
-      property="og:description"
-      content="A curated collection of high-performance button components for modern web applications."
-    />
-    <meta property="og:site_name" content="ButtonUI" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ButtonUI - Modern Interactive Button Components</title>
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <meta name="description"
+    content="A curated collection of high-performance, interaction-heavy button components crafted for the modern web with React and Tailwind CSS." />
+  <meta name="keywords" content="buttons, ui components, react, tailwind css, web design, interactive buttons" />
+  <meta name="author" content="ButtonUI" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="ButtonUI - Modern Interactive Button Components"
-    />
-    <meta
-      name="twitter:description"
-      content="A curated collection of high-performance button components for modern web applications."
-    />
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ButtonUI - Modern Interactive Button Components" />
+  <meta property="og:description"
+    content="A curated collection of high-performance button components for modern web applications." />
+  <meta property="og:site_name" content="ButtonUI" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ButtonUI - Modern Interactive Button Components" />
+  <meta name="twitter:description"
+    content="A curated collection of high-performance button components for modern web applications." />
 
-  <body class="bg-[#050505] text-white">
-    <div id="root"></div>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+</head>
 
-    <!-- Global SVG Filters for Liquid/Gooey Effects -->
-    <svg
-      style="position: absolute; width: 0; height: 0"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <defs>
-        <filter id="goo">
-          <feGaussianBlur
-            in="SourceGraphic"
-            stdDeviation="8"
-            result="blur"
-          ></feGaussianBlur>
-          <feColorMatrix
-            in="blur"
-            mode="matrix"
-            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-            result="goo"
-          ></feColorMatrix>
-          <feComposite
-            in="SourceGraphic"
-            in2="goo"
-            operator="atop"
-          ></feComposite>
-        </filter>
-      </defs>
-    </svg>
-    <script type="module" src="/main.tsx"></script>
-  </body>
+<body class="bg-[#050505] text-white">
+  <div id="root"></div>
+
+  <!-- Global SVG Filters for Liquid/Gooey Effects -->
+  <svg style="position: absolute; width: 0; height: 0" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo">
+        </feColorMatrix>
+        <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+      </filter>
+    </defs>
+  </svg>
+  <script type="module" src="/main.tsx"></script>
+</body>
+
 </html>

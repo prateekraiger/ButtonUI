@@ -1,137 +1,81 @@
-# ButtonUI
-
 <div align="center">
-  <h3>Modern Interactive Button Components</h3>
-  <p>A curated collection of high-performance, interaction-heavy button components crafted for the modern web with React and Tailwind CSS.</p>
+  <br />
+  <img src="public/logo.svg" alt="ButtonUI Logo" width="100" height="100">
+  <br />
+  <h1 align="center">ButtonUI</h1>
+  <p align="center">
+    <strong>The Ultimate Interaction Library</strong>
+  </p>
+  <p align="center">
+    A curated collection of industry-leading, high-performance button interactions.
+    <br />
+    Crafted with <strong>React</strong> & <strong>Tailwind CSS</strong>.
+  </p>
+
+  <br />
+
+  <a href="https://buttonui.com"><strong>Explore Components »</strong></a>
+  <br />
+  <br />
+
+  [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 </div>
 
-## ✨ Features
+<br />
 
-- 🎨 **50+ Beautiful Button Designs** - From fluid animations to 3D effects
-- ⚡ **High Performance** - Optimized for 60fps animations
-- 🎯 **Production Ready** - Copy-paste ready components
-- 📱 **Fully Responsive** - Works perfectly on all devices
-- 🔧 **Tailwind CSS** - Easy to customize and extend
-- 📘 **TypeScript Support** - Fully typed components
-- 🎭 **Multiple Categories** - Fluid, 3D, Interaction, Typography, Aesthetic
-- 🆓 **Open Source** - MIT License
+## ⚡ Overview
 
-## 🚀 Quick Start
+**ButtonUI** is not just another component library. It is a design manifest for modern web interactions.
+We push the boundaries of what's possible with CSS and JavaScript to deliver **60fps, GPU-accelerated** animations that feel tangible and premium.
 
-### Prerequisites
+> "Details are not just details. They make the design." — Charles Eames
 
-- Node.js (v18 or higher)
-- npm or yarn
+## ✨ Key Features
 
-### Installation
+- **Fluid Interface**: Buttons that mimic liquid properties using complex SVG filters.
+- **3D & Depth**: Breaking the 2D plane with CSS transforms and perspective.
+- **Micro-Interactions**: Subtle feedbacks that delight users on every click.
+- **Zero Config**: Copy, paste, and ship. No complex installation required.
+- **Type Solid**: Built with 100% TypeScript for robust integrations.
 
-1. Clone the repository:
+## 🛠️ Usage
 
-```bash
-git clone https://github.com/prateekraiger/buttonui.git
-cd buttonui
-```
+Our philosophy is simple: **Copy & Paste**.
 
-2. Install dependencies:
+1.  Browse the gallery.
+2.  Click the `< >` code icon.
+3.  Copy the code into your project.
 
-```bash
-npm install
-```
-
-3. Run the development server:
-
-```bash
-npm run dev
-```
-
-4. Open your browser and visit `http://localhost:5173`
-
-## 📦 Usage
-
-Each button component is self-contained and easy to use. Simply copy the code from the website and paste it into your project.
+### Example
 
 ```tsx
-import { ButtonComponent } from "./components/YourButton";
+import { LiquidButton } from "./path/to/component";
 
-function App() {
-  return (
-    <div>
-      <ButtonComponent />
-    </div>
-  );
+export default function App() {
+  return <LiquidButton>Hover Me</LiquidButton>;
 }
 ```
 
-## 🏗️ Build for Production
+## 🏗️ Local Development
+
+Want to contribute or run the gallery locally?
 
 ```bash
-npm run build
+# 1. Clone
+git clone https://github.com/prateekraiger/button-ui.git
+
+# 2. Install
+pnpm install
+
+# 3. Dev
+pnpm dev
 ```
-
-The production-ready files will be in the `dist` directory.
-
-## 📂 Project Structure
-
-```
-buttonui/
-├── components/       # Reusable UI components (Navbar, Footer, etc.)
-├── pages/           # Page components (Home, About, Contact, etc.)
-├── data/            # Button data and configurations
-│   └── buttons/     # Button component definitions
-├── public/          # Static assets
-└── dist/            # Production build
-```
-
-## 🎨 Component Categories
-
-- **Fluid Interface** - Organic animations that mimic liquid properties
-- **Depth & Dimension** - 3D transforms that break the 2D plane
-- **Interaction Lab** - Micro-interactions that delight users
-- **Typography** - Text-based animations and reveals
-- **Design Aesthetics** - Styles from Brutalism to Glassmorphism
-
-## 🛠️ Technology Stack
-
-- **React 19** - Latest React features
-- **TypeScript** - Type-safe code
-- **Tailwind CSS** - Utility-first styling
-- **Vite** - Lightning-fast build tool
-- **React Router** - Client-side routing
-- **Lucide React** - Beautiful icons
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Distributed under the **Apache 2.0 License**. See `LICENSE` for more information.
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 👨‍💻 Author
-
-Created and maintained by [@prateekraiger](https://github.com/prateekraiger)
-
-## 🙏 Acknowledgments
-
-- Thanks to all contributors who have helped make ButtonUI better
-- Inspired by modern design systems and component libraries
-- Built with love for the web development community
-
-## 📞 Contact
-
-- Website: [ButtonUI](https://buttonui.com)
-- GitHub: [@prateekraiger](https://github.com/prateekraiger)
-- Email: contact@buttonui.com
-
----
-
+<br />
 <div align="center">
-  <p>Made with ❤️ by the ButtonUI team</p>
-  <p>⭐ Star us on GitHub if you find this useful!</p>
+  <small>Designed & Built by <a href="https://github.com/prateekraiger">@prateekraiger</a></small>
 </div>
