@@ -1,3 +1,4 @@
+import React from "react"
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
 
@@ -32,66 +33,71 @@ export function Footer({
   copyright,
 }: FooterProps) {
   return (
-    <footer className="pb-6 pt-16 lg:pb-8 lg:pt-24 bg-black">
-      <div className="px-4 lg:px-8">
-        <div className="md:flex md:items-start md:justify-between">
-          <Link
-            to="/"
-            className="flex items-center gap-x-2"
-            aria-label={brandName}
-          >
-            {logo}
-            <span className="font-bold text-xl">{brandName}</span>
-          </Link>
-          <ul className="flex list-none mt-6 md:mt-0 space-x-3">
-            {socialLinks.map((link, i) => (
-              <li key={i}>
-                <Button
-                  variant="secondary"
-                  size="icon"
-                  className="h-10 w-10 rounded-full"
-                  asChild
-                >
-                  <a href={link.href} target="_blank" rel="noreferrer" aria-label={link.label}>
-                    {link.icon}
-                  </a>
-                </Button>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="border-t mt-6 pt-6 md:mt-4 md:pt-8 lg:grid lg:grid-cols-10">
-          <nav className="lg:mt-0 lg:col-[4/11]">
-            <ul className="list-none flex flex-wrap -my-1 -mx-2 lg:justify-end">
-              {mainLinks.map((link, i) => (
-                <li key={i} className="my-1 mx-2 shrink-0">
-                  <Link
-                    to={link.href}
-                    className="text-sm text-white underline-offset-4 hover:underline"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <div className="mt-6 lg:mt-0 lg:col-[4/11]">
-            <ul className="list-none flex flex-wrap -my-1 -mx-3 lg:justify-end">
+    <footer className="py-12 bg-[#0A0A0A]/90 backdrop-blur-xl border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="flex flex-col gap-4">
+            <Link
+              to="/"
+              className="flex items-center gap-x-2 hover:opacity-80 transition-opacity"
+              aria-label={brandName}
+            >
+              {logo}
+              <span className="font-bold text-xl tracking-tight">{brandName}</span>
+            </Link>
+            <div className="text-sm text-zinc-500">
+              <div>{copyright.text}</div>
+              {copyright.license && <div>{copyright.license}</div>}
+            </div>
+          </div>
+
+          <div className="flex flex-col md:items-end gap-6">
+            <div className="flex items-center gap-6">
+              <nav>
+                <ul className="flex items-center gap-6">
+                  {mainLinks.map((link, i) => (
+                    <li key={i}>
+                      <Link
+                        to={link.href}
+                        className="text-sm font-medium text-zinc-400 hover:text-white transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+              <div className="h-4 w-px bg-white/10 hidden md:block" />
+              <ul className="flex items-center gap-3">
+                {socialLinks.map((link, i) => (
+                  <li key={i}>
+                    <Button
+                      variant="secondary"
+                      size="icon"
+                      className="h-10 w-10 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-zinc-400 hover:text-white"
+                      asChild
+                    >
+                      <a href={link.href} target="_blank" rel="noreferrer" aria-label={link.label}>
+                        {link.icon}
+                      </a>
+                    </Button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <ul className="flex items-center gap-6">
               {legalLinks.map((link, i) => (
-                <li key={i} className="my-1 mx-3 shrink-0">
+                <li key={i}>
                   <a
                     href={link.href}
-                    className="text-sm text-muted-foreground underline-offset-4 hover:underline"
+                    className="text-xs text-zinc-600 hover:text-zinc-400 transition-colors"
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="mt-6 text-sm leading-6 text-muted-foreground whitespace-nowrap lg:mt-0 lg:row-[1/3] lg:col-[1/4]">
-            <div>{copyright.text}</div>
-            {copyright.license && <div>{copyright.license}</div>}
           </div>
         </div>
       </div>

@@ -1,57 +1,131 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X, Github } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Github, Star } from "lucide-react";
 import { Logo } from "./Logo";
+
+const GitHubButton: React.FC<{ children?: React.ReactNode; className?: string }> = ({
+  children = "Star on GitHub",
+  className = "",
+}) => {
+  return (
+    <a
+      href="https://github.com/prateekraiger/ButtonUI"
+      target="_blank"
+      rel="noreferrer"
+      className={`group relative flex items-center justify-center gap-2 px-5 py-2.5 bg-zinc-900 border border-zinc-800 rounded-full overflow-hidden transition-all duration-300 hover:border-zinc-600 hover:bg-zinc-800 ${className}`}
+    >
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-[100%] group-hover:animate-shimmer" />
+      <Github className="w-4 h-4 text-white transition-transform group-hover:scale-110" />
+      <span className="text-zinc-200 font-medium text-sm group-hover:text-white transition-colors">
+        {children}
+      </span>
+      <Star className="w-3.5 h-3.5 text-yellow-500/50 group-hover:text-yellow-400 transition-colors group-hover:fill-yellow-400" />
+    </a>
+  );
+};
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const isActive = (path: string) => location.pathname === path;
+
   return (
-    <nav className="bg-[#050505] fixed w-full z-20 top-0 start-0 border-b border-white/5">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <Logo size={32} />
-            <span className="self-center text-xl text-white font-semibold whitespace-nowrap">ButtonUI</span>
-        </Link>
-        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <a
-              href="https://github.com/prateekraiger"
-              target="_blank"
-              rel="noreferrer"
-              className="text-black bg-white hover:bg-zinc-200 box-border border border-transparent focus:ring-4 focus:ring-white/20 shadow-xs font-medium leading-5 rounded-lg text-sm px-3 py-2 focus:outline-none"
+    <div className="fixed top-0 left-0 right-0 z-50 px-6 pt-6">
+      <nav className="max-w-7xl mx-auto px-6 py-4">
+        <div className="flex items-center justify-between">
+          {/* Left Side: Logo + Brand + Navigation */}
+          <div className="flex items-center gap-8">
+            <Link
+              to="/"
+              className="flex items-center gap-3 hover:opacity-80 transition-opacity"
             >
-              <Github className="w-4 h-4 inline-block mr-2" />
-              GitHub
-            </a>
-            <button
+              <Logo size={28} />
+              <span className="text-lg font-bold tracking-tight text-white">
+                ButtonUI
+              </span>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-2">
+              <Link
+                to="/"
+                className={`text-sm font-medium px-4 py-1.5 rounded-full border transition-all ${
+                  isActive("/")
+                    ? "bg-white/10 border-white/20 text-white shadow-[0_0_10px_rgba(255,255,255,0.1)]"
+                    : "bg-white/5 border-white/10 text-zinc-400 hover:text-white hover:bg-white/10 hover:border-white/20"
+                }`}
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className={`text-sm font-medium px-4 py-1.5 rounded-full border transition-all ${
+                  isActive("/about")
+                    ? "bg-white/10 border-white/20 text-white shadow-[0_0_10px_rgba(255,255,255,0.1)]"
+                    : "bg-white/5 border-white/10 text-zinc-400 hover:text-white hover:bg-white/10 hover:border-white/20"
+                }`}
+              >
+                About
+              </Link>
+            </div>
+          </div>
+
+          {/* Right Side: GitHub Button */}
+          <div className="hidden md:block">
+            <GitHubButton>Star on GitHub</GitHubButton>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className="md:hidden p-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? (
+              <X className="w-5 h-5" />
+            ) : (
+              <Menu className="w-5 h-5" />
+            )}
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile Navigation */}
+      {isMenuOpen && (
+        <div className="md:hidden mt-3 max-w-5xl mx-auto bg-[#0A0A0A]/90 backdrop-blur-xl border border-white/10 rounded-3xl p-6 shadow-2xl shadow-black/50 animate-in fade-in slide-in-from-top-5 duration-300">
+          <div className="flex flex-col gap-3">
+            <Link
+              to="/"
               onClick={toggleMenu}
-              type="button"
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-zinc-400 rounded-lg md:hidden hover:bg-white/5 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/10"
-              aria-controls="navbar-sticky"
-              aria-expanded={isMenuOpen ? "true" : "false"}
+              className={`text-sm font-medium px-4 py-2.5 rounded-full transition-all ${
+                isActive("/")
+                  ? "text-white bg-white/10"
+                  : "text-zinc-400 hover:text-white hover:bg-white/5"
+              }`}
             >
-                <span className="sr-only">Open main menu</span>
-                {isMenuOpen ? (
-                  <X className="w-6 h-6" />
-                ) : (
-                  <Menu className="w-6 h-6" />
-                )}
-            </button>
+              Home
+            </Link>
+            <Link
+              to="/about"
+              onClick={toggleMenu}
+              className={`text-sm font-medium px-4 py-2.5 rounded-full transition-all ${
+                isActive("/about")
+                  ? "text-white bg-white/10"
+                  : "text-zinc-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              About
+            </Link>
+            <div className="pt-2 border-t border-white/10 mt-2">
+              <GitHubButton className="w-full" />
+            </div>
+          </div>
         </div>
-        <div className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${isMenuOpen ? '' : 'hidden'}`} id="navbar-sticky">
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-white/5 rounded-lg bg-white/5 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-[#050505]">
-            <li>
-              <Link to="/" className="block py-2 px-3 text-white bg-white/5 rounded-sm md:bg-transparent md:text-white md:p-0" aria-current="page">Home</Link>
-            </li>
-            <li>
-              <Link to="/about" className="block py-2 px-3 text-white rounded hover:bg-white/10 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0">About</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+      )}
+    </div>
   );
 };
 
